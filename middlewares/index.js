@@ -1,8 +1,8 @@
-const validateBody = require('./validateBody');
-const isValidId = require('./isValidId');
-const authenticate = require('./authenticate');
-const upload = require('./upload');
-const avatarOptimizer = require('./avatarOptimizer');
+const validateBody = require("./validatebody");
+const isValidId = require("./isValidId");
+const authenticate = require("./authenticate");
+const upload = require("./upload");
+const avatarOptimizer = require("./avatarOptimizer");
 
 module.exports = {
   validateBody,

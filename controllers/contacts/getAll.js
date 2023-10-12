@@ -1,4 +1,4 @@
-const { Contact } = require('../../models/contact');
+const { Contact } = require("../../models/contact");
 
 const getAll = async (req, res, next) => {
   const { _id: owner } = req.user;
@@ -7,10 +7,10 @@ const getAll = async (req, res, next) => {
 
   const findOptions = favorite ? { owner, favorite } : { owner };
 
-  const result = await Contact.find(findOptions, '-createdAt -updatedAt', {
+  const result = await Contact.find(findOptions, "-createdAt -updatedAt", {
     skip,
     limit,
-  }).populate('owner', 'email subscription');
+  }).populate("owner", "email subscription");
 
   res.status(200).json(result);
 };

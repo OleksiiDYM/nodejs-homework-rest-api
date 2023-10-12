@@ -1,6 +1,6 @@
-const { SUBSCRIPTIONS_ENUM } = require('../../constants');
-const { HttpError } = require('../../helpers');
-const { User } = require('../../models/user');
+const { SUBSCRIPTIONS_ENUM } = require("../../constants");
+const { HttpError } = require("../../helpers");
+const { User } = require("../../models/user");
 
 const updateSubscription = async (req, res, next) => {
   const { subscription } = req.body;
@@ -20,7 +20,7 @@ const updateSubscription = async (req, res, next) => {
   );
 
   res.status(201).json({
-    message: 'Subscription successfully updated',
+    message: "Subscription successfully updated",
     user: {
       email: user.email,
       subscription: user.subscription,
